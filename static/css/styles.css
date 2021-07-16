@@ -422,6 +422,9 @@ header {
   flex-direction: column;
   row-gap: 1rem;
 }
+.projects .posts .article .article-content {
+  padding-bottom: 1rem;
+}
 .projects .posts .article img {
   max-width: 100%;
 }
