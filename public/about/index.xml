@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Aldom Construction | Turning Dreams to Homes</title>
+    <link>/about/</link>
+    <description>Recent content in Abouts on Aldom Construction | Turning Dreams to Homes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Jun 2021 10:44:25 +0100</lastBuildDate>
+    
+	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>/about/about/</link>
+      <pubDate>Fri, 25 Jun 2021 10:44:25 +0100</pubDate>
+      
+      <guid>/about/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
