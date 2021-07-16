@@ -1,0 +1,71 @@
+<!--
+    <nav class="nav">
+    <div class="logo">
+
+        <span>
+            <a href="/">
+                {{ partial "logo" . }}
+            </a>
+        </span>
+
+        <span class="text">
+            Aldom Construction
+        </span>
+
+    </div>
+
+
+    <div class="menu" id="myLinks">
+        <a href="/posts/" class="nav-link">projects</a>
+        <a href="/about/" class="nav-link">about</a>
+        <a href="/contact/" class="nav-link">contact</a>
+        <a href="/services/" class="nav-link">services</a>
+    </div>
+
+    <a class="toggle" onclick="myFunction()">
+        <img src="/images/menu.svg" alt="">
+    </a>
+
+</nav>
+-->
+
+<nav class="nav-section">
+
+    <div class="nav">
+        <div class="logo">
+
+            <span>
+                <a href="/" name="logo">
+                    {{ partial "logo" . }}
+                </a>
+            </span>
+
+        </div>
+
+        <div class="menu" id="myLinks">
+            <ul>
+                <li><a href="/posts/" name="posts">projects</a></li>
+                <li><a href="/about/" name="about">about</a></li>
+                <li><a href="/contact/" name="contact">contact</a></li>
+                <li><a href="/services/" name="services">services</a>
+            </ul>
+        </div>
+
+        <a class="toggle" id="toggler" onclick="myFunction()" name="toggle">
+
+            <img src="/images/menu.svg" alt="hamburger" id="hamburger" width="23" height="15">
+            <img src="/images/close.svg" alt="close-button" width="24" height="24" id="close" style="display: none;">
+
+        </a>
+    </div>
+
+    <div class="secondary-nav" id="mobile-menu" style="display: none;">
+        <ul>
+            <li><a href="/posts/" name="posts">projects</a></li>
+            <li><a href="/about/" name="about">about</a></li>
+            <li><a href="/contact/" name="contact">contact</a></li>
+            <li><a href="/services/" name="services">services</a>
+        </ul>
+    </div>
+
+</nav>

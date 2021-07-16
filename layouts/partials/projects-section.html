@@ -1,0 +1,64 @@
+<section class="projects">
+    <h2>Latest Projects</h2>
+
+    <div class="posts">
+
+        <!--
+            <div class="article">
+
+            <div class="rez">residential</div>
+            <img src="/images/f.png" alt="" width="" height="">
+            <p>21 June, 2021</p>
+            <p class="name">The Nefertiti Project.</p>
+
+        </div>
+
+        <div class="article">
+
+            <div class="rez">residential</div>
+            <img src="/images/f.png" alt="" width="" height="">
+            <p>21 June, 2021</p>
+            <p class="name">The Nefertiti Project.</p>
+
+        </div>
+
+        <div class="article">
+
+            <div class="rez">residential</div>
+            <img src="/images/f.png" alt="" width="" height="">
+            <p>21 June, 2021</p>
+            <p class="name">The Nefertiti Project.</p>
+
+        </div>
+        -->
+
+        <div class="article">
+            {{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections).ByTitle }}
+
+            <a href="{{ .Permalink }}">
+                <div class="article-content">
+                    {{ with .Params.featured_image }}
+                    <img src="{{ . }}" alt="article-image" width="452" height="301">
+                    {{ end }}
+    
+                    <p>{{ .Date.Format "January 2, 2006" }}</p>
+                    <p class="name">{{ .Title }}</p>
+                </div>
+            </a>
+
+
+            {{ end }}
+        </div>
+
+    </div>
+
+    <div class="view-projects">
+        <button>
+            <a href="/posts/" name="posts">
+                Latest projects
+            </a>
+        </button>
+    </div>
+
+
+</section>

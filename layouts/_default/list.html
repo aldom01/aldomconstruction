@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="post-list">
+
+    <div class="blog-hero">
+        <h1>Featuring our Latest Projects, Company News and Advice.</h1>
+    </div>
+
+    <div class="all_posts">
+        {{ range .Paginator.Pages }}
+
+        <a href="{{ .Permalink }}">
+            <article class="single-post">
+
+                {{ with .Params.featured_image }}
+                <img src="{{ . }}">
+                {{ end }}
+
+                <h2 class="entry-title">{{ .Title }}</h2>
+
+                <div class="post-meta">
+
+                    <p class="post-date">
+                        <time>{{ .Date.Format "Mon Jan 2, 2006" }}</time>
+                    </p>
+
+                    <p class="post-author">
+                        Posted by: {{ .Params.Author}}
+                    </p>
+
+                    <!---
+                <div class="entry-content">
+                    {{ .Summary }}
+                </div>
+                -->
+
+                </div>
+            </article>
+        </a>
+
+        {{ end }}
+    </div>
+
+    <div class="paginator">
+
+        {{ template "_internal/pagination.html" . }}
+
+    </div>
+
+
+    {{ partial "contact-section" . }}
+
+</section>
+{{ end }}

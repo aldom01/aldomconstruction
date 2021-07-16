@@ -1,0 +1,11 @@
++++
+title =  "The Dawn of the Moon"
+date = 2021-06-25T10:45:58+01:00
+draft = false
+author = "ileleazu"
+thumbnail = "/images/image12.png"
+featured_image = "/images/boss-hero.jpg"
+tags = ["building", "construction"]
++++
+
+

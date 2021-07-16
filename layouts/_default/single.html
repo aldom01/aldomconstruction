@@ -1,0 +1,73 @@
+{{ define "main" }}
+<article class="single-post">
+
+    <div class="article-hero">
+
+        <div class="article-hero_img">
+
+            {{ with .Params.featured_image }}
+            <img src="{{ . }}">
+            {{ end }}
+            
+        </div>
+
+        <!--
+            <div class="permalink">
+            {{with .NextInSection}}
+            {{.Permalink}}
+            {{end}}
+        </div>
+        -->
+
+        <h1 class="article-title">
+            <!--
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            -->
+            {{ .Title }}
+        </h1>
+
+    </div>
+
+    <div class="post-meta">
+
+        <div>
+            <span class="post-author">
+                By: {{ .Params.Author}}
+            </span>
+
+            <span class="post-date">
+                <time>{{ .Date.Format "Mon Jan 2, 2006" }}</time>
+            </span>
+
+            <div class="post-wordcount">
+                <span id="wordcount">
+                    {{ .WordCount }} Words
+                </span>
+            </div>
+
+            <div class="post-wordcount">
+                <span id="wordcount">
+                    {{ .Params.Tags }}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="entry-content">
+        {{ .Content }}
+    </div>
+
+    <!--
+
+    <div class="prev-next-btn">
+        <span>prev-btn</span>
+        <span>next-btn</span>
+    </div>
+    -->
+
+
+    {{ partial "contact-section" . }}
+
+</article>
+
+{{ end }}

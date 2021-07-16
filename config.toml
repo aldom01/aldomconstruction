@@ -1,0 +1,7 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Aldom Construction | Turning Dreams to Homes"
+paginate = 6
+
+[params]
+dateFormat = "Jan 2, 2006, 3:04PM"
