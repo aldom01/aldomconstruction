@@ -245,9 +245,14 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   display: grid;
+  /* Position the image container (needed to position the left and right arrows) */
 }
 .hero img {
   max-width: 100%;
+  height: 100%;
+}
+.hero .vid-container {
+  display: none;
 }
 .hero .vid-container video {
   position: absolute;
@@ -267,21 +272,78 @@ header {
 .hero .description p {
   font-size: 12px;
 }
-
-/*
-
-
-.hero h1 {
-    font-size: 1.8vw;
-    text-transform: uppercase;
-    text-align: center;
+.hero .img-container {
+  position: relative;
+  /* Hide the images by default */
+  /* Add a pointer when hovering over the thumbnail images */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* Container for image text */
+  /* Six columns side by side */
+  /* Add a transparency effect for thumnbail images */
+}
+.hero .img-container .mySlides {
+  display: none;
+  height: 75vh;
+  /* Number text (1/3 etc) */
+}
+.hero .img-container .mySlides .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.hero .img-container .cursor {
+  cursor: pointer;
+}
+.hero .img-container .prev,
+.hero .img-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.hero .img-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.hero .img-container .prev:hover,
+.hero .img-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.hero .img-container .caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+.hero .img-container .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hero .img-container .column {
+  float: left;
+  width: 16.66%;
+}
+.hero .img-container .demo {
+  opacity: 0.6;
+}
+.hero .img-container .active,
+.hero .img-container .demo:hover {
+  opacity: 1;
 }
 
-.hero p {
-    font-size: 16px;
-    font-style: italic;
-}
-*/
 .aldom-svg {
   padding: 3rem 0;
   display: flex;
@@ -293,7 +355,6 @@ header {
 
 .services--section {
   padding: 2rem 1rem;
-  padding-top: 7rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -715,10 +776,19 @@ header {
   }
 }
 @media screen and (min-width: 1024px) {
+  .hero .vid-container {
+    display: block;
+  }
   .hero .description {
     bottom: -15%;
   }
+  .hero .img-container {
+    display: none;
+  }
 
+  .services--section {
+    padding-top: 7rem;
+  }
   .services--section .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
