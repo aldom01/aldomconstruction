@@ -33,7 +33,7 @@
         -->
 
         <div class="article">
-            {{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections).ByTitle }}
+            {{ range first 3 (where site.RegularPages "Type" "in" site.Params.mainSections).ByDate.Reverse }}
 
             <a href="{{ .Permalink }}">
                 <div class="article-content">

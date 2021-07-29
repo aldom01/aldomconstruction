@@ -1,6 +1,6 @@
 +++
 title =  "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
+date = "{{ .Date }}"
 draft = false
 author = "ileleazu"
 thumbnail = "/images/image12.png"

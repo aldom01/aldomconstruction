@@ -1,6 +1,7 @@
 baseURL = ""
 languageCode = "en-us"
 title = "Aldom Construction | Turning Dreams to Homes"
+theme = "wede"
 paginate = 6
 
 [params]
